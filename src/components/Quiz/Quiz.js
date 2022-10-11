@@ -25,9 +25,9 @@ const Quiz = ({ quiz, idx }) => {
 
     return (
         <div className='w-9/12 mx-auto border-2 border-gray-500 p-4 md:p-8 my-6'>
-            <div className='flex justify-between items-center'>
+            <div className='md:flex justify-between items-center'>
                 <li className='my-8 text-xl font-medium'>Q{idx + 1}:{question}</li>
-                <button onClick={() => setOpen(!open)} className='w-6 h-6'>
+                <button onClick={() => setOpen(!open)} className='mb-2 w-10 h-10 md:w-6 md:h-6'>
                     {
                         open ? <EyeIcon ></EyeIcon> : <EyeSlashIcon></EyeSlashIcon>
                     }
