@@ -11,11 +11,13 @@ const Quiz = ({ quiz, idx }) => {
         const right = correctAnswer === ans;
         if (right) {
             toast.success('Correct! Your answer is right.', {
+                autoClose: 1000,
                 position: 'top-center',
             })
         }
         else {
             toast.error('Incorrect! Your answer is wrong.', {
+                autoClose: 1000,
                 position: 'top-center'
             })
         }
