@@ -5,7 +5,7 @@ import { CartesianGrid, Legend, Line, LineChart, Tooltip, XAxis, YAxis } from 'r
 const Statistics = () => {
     const data = useLoaderData().data;
     return (
-        <div>
+        <div className='w-11/12 mx-auto my-40'>
             <LineChart
                 width={350}
                 height={300}
@@ -17,14 +17,14 @@ const Statistics = () => {
                     bottom: 5
                 }}
             >
-                <CartesianGrid strokeDasharray="3 3" />
+                <CartesianGrid strokeDasharray="4 3" />
                 <XAxis dataKey="name" />
                 <YAxis />
                 <Tooltip />
                 <Legend />
                 <Line type="monotone" dataKey="total" stroke="#82ca9d" />
             </LineChart>
-        </div>
+        </div >
     );
 };
 

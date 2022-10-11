@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 
-const Quiz = ({ quiz }) => {
+const Quiz = ({ quiz, idx }) => {
     const [cart, setCart] = useState([]);
-
-
-
     const { question, options } = quiz
     console.log(quiz);
 
@@ -19,15 +16,15 @@ const Quiz = ({ quiz }) => {
     }
     return (
         <div className='w-9/12 mx-auto border-2 border-gray-500 p-4 md:p-8 my-6'>
-            <li className='my-8 text-xl font-medium'>{question}</li>
+            <li className='my-8 text-xl font-medium'>Q{idx + 1}:{question}</li>
             {
                 options.map((option, idx) => <div
                     key={idx}
                 >
-                    <button className='flex items-center w-11/12 md:w-1/2 mb-2 p-4 border border-black'>
+                    <div className='flex items-center w-11/12 md:w-1/2 mb-2 p-4 border border-black'>
                         <input onClick={() => handleOption(option)} type="radio" name="radio-1" className="radio" />
                         <p className='ml-4'>{option}</p>
-                    </button>
+                    </div>
                 </div>)
             }
         </div>

@@ -10,8 +10,8 @@ const Quizs = () => {
             <h2 className='my-12 text-center text-2xl font-bold'>Topic : {quizs.name}</h2>
             <div>
                 {
-                    quizQuestions.map(quiz => <Quiz
-
+                    quizQuestions.map((quiz, idx) => <Quiz
+                        idx={idx}
                         key={quiz.id}
                         quiz={quiz}
                     ></Quiz>)
