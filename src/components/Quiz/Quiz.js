@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
-import { EyeIcon } from '@heroicons/react/24/solid'
+import { EyeIcon, EyeSlashIcon } from '@heroicons/react/24/solid'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Quiz = ({ quiz, idx }) => {
-    const [cart, setCart] = useState([]);
-    const { question, options } = quiz
-    console.log(quiz);
+    const [open, setOpen] = useState(false);
+    const { question, options, correctAnswer } = quiz
 
     const handleOption = (ans) => {
-        const right = quiz.correctAnswer === ans;
+        const right = correctAnswer === ans;
         if (right) {
             toast.success('Correct! Your answer is right.', {
                 position: 'top-center',
@@ -21,12 +20,17 @@ const Quiz = ({ quiz, idx }) => {
             })
         }
     }
+
+
+
     return (
         <div className='w-9/12 mx-auto border-2 border-gray-500 p-4 md:p-8 my-6'>
             <div className='flex justify-between items-center'>
                 <li className='my-8 text-xl font-medium'>Q{idx + 1}:{question}</li>
-                <button>
-                    <EyeIcon className='w-6 h-6'></EyeIcon>
+                <button onClick={() => setOpen(!open)} className='w-6 h-6'>
+                    {
+                        open ? <EyeIcon ></EyeIcon> : <EyeSlashIcon></EyeSlashIcon>
+                    }
                 </button>
 
 
@@ -40,6 +44,11 @@ const Quiz = ({ quiz, idx }) => {
                         <p className='ml-4'>{option}</p>
                     </div>
                 </div>)
+            }
+            {
+                <div>
+                    <h2 className={`text-lg font-normal text-blue-800 mt-6 ${!open ? 'hidden' : 'block'}`}>Correct Answer : {correctAnswer}</h2>
+                </div>
             }
             <ToastContainer />
         </div>
