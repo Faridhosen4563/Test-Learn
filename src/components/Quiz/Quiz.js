@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { EyeIcon } from '@heroicons/react/24/solid'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Quiz = ({ quiz, idx }) => {
     const [cart, setCart] = useState([]);
@@ -9,17 +11,24 @@ const Quiz = ({ quiz, idx }) => {
     const handleOption = (ans) => {
         const right = quiz.correctAnswer === ans;
         if (right) {
-            alert('Right ans')
+            toast.success('Correct! Your answer is right.', {
+                position: 'top-center',
+            })
         }
         else {
-            alert('wrong ans')
+            toast.error('Incorrect! Your answer is wrong.', {
+                position: 'top-center'
+            })
         }
     }
     return (
         <div className='w-9/12 mx-auto border-2 border-gray-500 p-4 md:p-8 my-6'>
             <div className='flex justify-between items-center'>
                 <li className='my-8 text-xl font-medium'>Q{idx + 1}:{question}</li>
-                <EyeIcon className='w-6 h-6'></EyeIcon>
+                <button>
+                    <EyeIcon className='w-6 h-6'></EyeIcon>
+                </button>
+
 
             </div>
             {
@@ -32,6 +41,7 @@ const Quiz = ({ quiz, idx }) => {
                     </div>
                 </div>)
             }
+            <ToastContainer />
         </div>
     );
 };
