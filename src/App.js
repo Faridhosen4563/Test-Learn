@@ -4,6 +4,7 @@ import './App.css';
 import Blog from './components/Blog/Blog';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
+import NotFound from './components/NotFound/NotFound';
 import Quizs from './components/Quizs/Quizs';
 import Statistics from './components/Statistics/Statistics';
 import Main from './Layout/Main';
@@ -40,6 +41,10 @@ function App() {
           element: <Blog></Blog>
         }
       ]
+    },
+    {
+      path: '*',
+      element: <NotFound></NotFound>
     }
   ])
   return (

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { EyeIcon } from '@heroicons/react/24/solid'
 
 const Quiz = ({ quiz, idx }) => {
     const [cart, setCart] = useState([]);
@@ -16,7 +17,11 @@ const Quiz = ({ quiz, idx }) => {
     }
     return (
         <div className='w-9/12 mx-auto border-2 border-gray-500 p-4 md:p-8 my-6'>
-            <li className='my-8 text-xl font-medium'>Q{idx + 1}:{question}</li>
+            <div className='flex justify-between items-center'>
+                <li className='my-8 text-xl font-medium'>Q{idx + 1}:{question}</li>
+                <EyeIcon className='w-6 h-6'></EyeIcon>
+
+            </div>
             {
                 options.map((option, idx) => <div
                     key={idx}
