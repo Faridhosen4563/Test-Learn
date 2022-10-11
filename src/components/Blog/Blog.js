@@ -29,7 +29,7 @@ const Blog = () => {
                     3. What is the useRef?
                 </div>
                 <div className="collapse-content">
-                    <p> The useRef is the react hook. The useRef Hook allows you to persist values between renders. It can be used to store a mutable value that does not cause a re-render when updated. It can be used to access a DOM element directly.</p>
+                    <p> The useRef is the react hook. The useRef Hook allows you to persist values between renders. It can be used to store a mutable value that does not cause a re-render when updated. It can be used to access a DOM element directly. Use useRef if you need to manage focus, text selection, trigger imperative animations or integrating third-party libraries. The useRef Hook allows you to persist values between renders. It can be used to store a mutable value that does not cause a re-render when updated. It can be used to access a DOM element directly.</p>
                 </div>
             </div>
         </div>
