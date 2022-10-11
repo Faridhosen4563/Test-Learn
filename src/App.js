@@ -12,12 +12,12 @@ function App() {
       element: <Main></Main>,
       children: [
         {
-          path: '/',
+          path: '/topics',
           loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
           element: <Home></Home>
         },
         {
-          path: '/:id',
+          path: '/topics/:id',
           loader: ({ params }) => {
             return fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`)
           },
