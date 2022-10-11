@@ -16,7 +16,12 @@ const Blog = () => {
                     2. How does Context API work?
                 </div>
                 <div className="collapse-content">
-                    <p> The React Context API is a way for a React app to effectively produce global variables that can be passed around. This is the alternative to "prop drilling" or moving props from grandparent to child to parent, and so on. Context is also touted as an easier, lighter approach to state management using Redux.</p>
+                    <p>Context is a built-in API introduced in ​​React 16.3. It makes it possible to pass data from parent to children nested deep down the component tree directly, instead of passing it down through a chain of props. The React Context API is a way for a React app to effectively produce global variables that can be passed around. This is the alternative to "prop drilling" or moving props from grandparent to child to parent, and so on. Context is also touted as an easier, lighter approach to state management using Redux.</p>
+                    <ol className='list-decimal mx-6 my-4'>
+                        <li>Initialize the Context</li>
+                        <li>Create the Provider</li>
+                        <li>Create the Consumer</li>
+                    </ol>
                 </div>
             </div>
             <div tabIndex={0} className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box my-4">
