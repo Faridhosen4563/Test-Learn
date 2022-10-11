@@ -18,7 +18,7 @@ const Quiz = ({ quiz }) => {
         }
     }
     return (
-        <div className='w-9/12 mx-auto'>
+        <div className='w-9/12 mx-auto border-2 border-gray-500 p-4 md:p-8 my-6'>
             <li className='my-8 text-xl font-medium'>{question}</li>
             {
                 options.map((option, idx) => <div

@@ -6,7 +6,7 @@ const Quizs = () => {
     const quizs = useLoaderData().data;
     const quizQuestions = quizs.questions
     return (
-        <div>
+        <div >
             <h2 className='my-12 text-center text-2xl font-bold'>Topic : {quizs.name}</h2>
             <div>
                 {
