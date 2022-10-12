@@ -42,7 +42,7 @@ const Quiz = ({ quiz, idx }) => {
                     key={idx}
                 >
                     <div className='flex items-center w-11/12 md:w-1/2 mb-2 p-4 border border-black'>
-                        <input onClick={() => handleOption(option)} type="radio" name="radio-1" className="radio" />
+                        <input onClick={() => handleOption(option)} type="radio" name={option} className="radio" />
                         <p className='ml-4'>{option}</p>
                     </div>
                 </div>)
