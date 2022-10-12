@@ -2,7 +2,7 @@ import React from 'react';
 
 const Blog = () => {
     return (
-        <div className='w-11/12 mx-auto my-6'>
+        <div className='w-11/12 mx-auto mt-6 mb-20'>
             <div tabIndex={0} className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box my-4">
                 <div className="collapse-title text-xl font-medium">
                     1. What is the react purpose?

@@ -7,6 +7,7 @@ const Home = () => {
     console.log(topics);
     return (
         <div>
+
             <div className='grid w-11/12 mx-auto gap-4 md:grid-cols-2 lg:grid-cols-4'>
                 {
                     topics.map(topic => <Topic

@@ -17,10 +17,11 @@ function App() {
       children: [
         {
           path: '/',
-          element: <Header></Header>,
+          loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
+          element: <><Header></Header><Home></Home></>
         },
         {
-          path: '/topics',
+          path: 'topics',
           loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
           element: <Home></Home>
         },
