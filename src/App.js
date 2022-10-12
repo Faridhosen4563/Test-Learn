@@ -1,5 +1,5 @@
 
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, useRouteError } from 'react-router-dom';
 import './App.css';
 import Blog from './components/Blog/Blog';
 import Header from './components/Header/Header';
@@ -14,6 +14,7 @@ function App() {
     {
       path: '/',
       element: <Main></Main>,
+      errorElement: <NotFound></NotFound>,
       children: [
         {
           path: '/',
@@ -44,10 +45,11 @@ function App() {
       ]
     },
     {
-      path: '*',
-      element: <NotFound></NotFound>
-    }
+      path: '/*',
+      element: <NotFound></NotFound>,
+    },
   ])
+
   return (
     <div >
       <RouterProvider router={router}></RouterProvider>
